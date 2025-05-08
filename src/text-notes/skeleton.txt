@@ -1,0 +1,20 @@
+>>>>>>>>> Homepage:
+    Spotlight Slider
+    Information icons sec
+    Prod Slider
+    Testimonial sec
+    Newsletter sec
+    Insta Feed sec
+
+
+
+>>>>>>>>> PDP:
+- prod details sec
+    left image | right details
+
+- Similar Products you might like
+    Prod Slider
+
+
+
+

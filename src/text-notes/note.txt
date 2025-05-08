@@ -1,0 +1,66 @@
+>>>>> For Tausif
+- Firstly You need to clone the Repo from GitHub
+- After that create a new Branch 
+- Then Clone the "Src" folder and Use it in your test local repo which you will create alongside this clone repo
+(Which we've discussed - That you will create 2 repos 1 will be cloned one and another is your local one in which you will start the development )
+- After making all the changes you will create a new folder in this Repo Called Tausif_Src in which you will paste all the components files and folders
+- Then commit the changes
+- After that I will Review and will merge the code
+- Then We'll Deploy the site.
+
+Repo name - Phase one _ 1  (something like this)
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>> Notes for Talib
+- Need to Install emailJS (DONE)
+- and Integrate it with subscribe now section and Contact Us Form
+
+
+Functionalities we can achieve using only GET_API of Products:
+- Product Listings (DONE)
+- Product Detail Page (DONE)
+- Showing different Categories
+- Featured Products on Home Page
+- Add to Cart Functionality
+- Wishlist Functionality
+- Search Functionality
+- Payment Method: Stripe Payment Gateway
+- Admin Dashboard
+
+>>> for Admin Logic Routing:
+https://reactrouter.com/start/declarative/navigating
+
+
+
+>>>>> New Addons
+- can use custom hook for fetching api as we need to call the api multiple times
+- IN PDP can use a widget for "share product"
+- Also Try to add a scroll to top button (DONE)
+
+
+>>>>>>>>> Icons PDP
+100% Original Products
+Icon: ✅ or 🛡️
+Message: "Authentic mobiles with manufacturer warranty."
+
+Fast & Free Delivery
+Icon: 🚚
+Message: "Get your phone delivered quickly, at no extra cost."
+
+Easy Returns
+Icon: 🔁 or 📦
+Message: "7-day hassle-free return policy."
+
+Secure Payments
+Icon: 🔒 or 💳
+Message: "Pay safely with trusted payment options."
+
+
+
+On Low priority
+Make zoom image on hover 
+https://codesandbox.io/p/sandbox/image-zoom-on-hover-i50bq?file=%2Fsrc%2FApp.js%3A16%2C1
+
+
+In PDP:
+Need to add filters

@@ -1,0 +1,20 @@
+Flow for Collaboration for Git
+
+- Main banda folder banayega (Talib) eg
+- collaborators add karega
+- tausif repo clone karega (git clone repo_name)
+- without writing anything apni new branch create karega (git branch tausif)
+- apna code wohi branch me likhega (tausif)
+- complete hone par commit karega and push karega (git push origin tausif) (Tausif)
+- inform karega team mate ko (talib ko) about the commit 
+
+- main banda fetch karega (git fetch) (steps to follow for Talib)
+  > switch (git checkout tausif) karke check karega about the changes
+  > master branch me reh ke merge karega (git merge tausif) 
+  > uske baad push karega
+
+
+- second banda Pehle fetch karega (git fetch ) (steps to follow for Tausif)
+  > second banda woh new merged code ko main/master me reh ke pull karega (Tausif) (git pull)
+  > after that us code ko apni branch me use karne ke liye master branch ko merge kareg - tausif me reh ke (git merge master)
+
