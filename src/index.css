@@ -1,15 +1,14 @@
 @import "tailwindcss";
 
 :root {
-    --primary-color: #72aec8;
-    --black-color: black;
-    --white-color: white;
+  --primary-color: #72aec8;
+  --black-color: black;
+  --white-color: white;
 }
 
-
 html {
-    font-family: Poppins;
-    scroll-behavior: smooth;
+  font-family: Poppins;
+  scroll-behavior: smooth;
 }
 
 /* .head_foot_cont_full {
@@ -18,16 +17,18 @@ html {
 } */
 
 .head_foot_cont {
-    /* background-color: yellowgreen !important; */
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 50px;
+  /* background-color: yellowgreen !important; */
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 50px;
 }
 
-/* 
-@media (min-width: 1441px) {
-    .head_foot_cont {
-    }
+/* @media only screen and (max-width: 900px) {
+  .head_foot_cont {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+  }
 } */
 
 /* footer.head_foot_cont_full {

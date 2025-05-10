@@ -16,5 +16,9 @@
     Prod Slider
 
 
+>>tausif works on 
 
-
+- all component responsive;
+- home page responsive
+- blog details page and listing page dynamic
+ 

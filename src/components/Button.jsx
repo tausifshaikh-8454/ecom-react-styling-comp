@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Button = ({
-    text="Dummy Text",
+    text = "Dummy Text",
     borderClr = 'border-black',
     bgClr = "bg-black",
     textClr = "text-white",
@@ -10,7 +10,7 @@ const Button = ({
 }) => {
     return (
         <button
-            className={` uppercase transition-all flex justify-center items-center p-[12px 25px] px-[25px] py-[12px] border ${borderClr} ${bgClr} ${textClr} hover:${hoverBgClr} hover:${hoverTextClr} cursor-pointer  `} >
+            className={`font-[Montserrat] text-[16px] sm:text-lg  transition-all flex justify-center items-center px-[10px] py-[7px] sm:px-[10px] sm:py-[10px] border ${borderClr} ${bgClr} ${textClr} hover:${hoverBgClr} hover:${hoverTextClr} cursor-pointer rounded-[10px] `} >
             {text}
         </button>
     )

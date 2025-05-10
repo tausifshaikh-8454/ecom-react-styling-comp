@@ -10,6 +10,7 @@ import { BsBoxFill } from "react-icons/bs";
 import { PiCreditCardFill } from "react-icons/pi";
 import ImageGallerySlider from '../../components/PDP_Page/ImageGallerySliders/ImageGallerySlider';
 import Accordian from '../../components/PDP_Page/Accordian/Accordian';
+import ProductIconDetails from '../../components/PDP_Page/ProductFeaturesBlock/ProductIconDetails';
 
 
 const ProductDetail = () => {
@@ -32,10 +33,10 @@ const ProductDetail = () => {
             {/* >>>>>>>>>>>>>> In Cont */}
             <div className="container_layout mx-auto flex justify-center items-center flex-col  "  >
 
-                <div className='py-[50px] flex gap-[50px] ' >
+                <div className='py-[50px] w-full flex flex-wrap sm:flex-nowrap gap-[50px] ' >
 
                     {/* >>>>>>>>>>>>> Left Section */}
-                    <div className="left_sec w-[80%] " >
+                    <div className="left_sec w-[100%]" >
                         {/* <img src="https://www.tintaccessories.com/wp-content/uploads/2024/01/MagPop-JPEG-1024x1024.jpg" alt="" /> */}
                         {/* >>>>>>>>>> Image Gallery Slider */}
                         <ImageGallerySlider />
@@ -44,13 +45,13 @@ const ProductDetail = () => {
 
                     {/* >>>>>>>>>>>>> Right Section */}
                     <div className="right_sec w-full ">
-                        <h3>Main Product Name</h3>
+                        <h3 className='font-[Montserrat] text-[25px] sm:text-[35px] lg:text-[50px] font-[600]'>Main Product Name</h3>
 
-                        <div className="price_cont">
-                            <p className='text-decoration-line'  > Regular Price: Rs: 5000 </p>
-                            <p className=''  > Sale Price: Rs: 2500 </p>
+                        <div className="price_cont flex flex-wrap justify-between w-full sm:w-[450px] mb-3">
+                            <p className='font-[Montserrat] font-semibold  text-[16px] sm:text-md line-through text-[#9c9898]'  >Regular Price: <span className="sm:text-[20px] text-[18px] font-[600] "> Rs: 5000 </span></p>
+                            <p className='font-[Montserrat] font-semibold text-[16px] sm:text-md'  > Sale Price: <span className="sm:text-[20px] text-[18px] font-[600]">Rs: 2500</span> </p>
                         </div>
-                        <div className="cont flex ">
+                        <div className="cont flex flex-nowrap gap-5">
 
                             <NumCounter />
 
@@ -58,43 +59,21 @@ const ProductDetail = () => {
 
                         </div>
 
-                        <div className="text">
-                            <p>Product Description:</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, eveniet cupiditate velit aut, dolor ipsum facilis deserunt sunt dignissimos dolores eum amet ea ut excepturi et modi minima. Voluptas, libero?</p>
-                        </div>
-
-                        <div className="icons pt-[25px] flex justify-between flex-wrap gap-[20px] items-center bg-indigo-700  ">
-
-                            <div className="icon_box flex flex-col justify-center items-center gap-[12px] bg-pink-300 w-[48%] ">
-                                <IoShieldCheckmarkSharp className='text-[38px]/[45px]  ' />
-                                <h5 className='text-[18px]/[24px]  ' >100% Original Products</h5>
-                            </div>
-
-                            <div className="icon_box flex flex-col justify-center items-center gap-[12px] bg-pink-300 w-[48%] ">
-                                <FaTruckFast className='text-[38px]/[45px]  ' />
-                                <h5 className='text-[18px]/[24px]  ' >Fast & Free Delivery</h5>
-                            </div>
-
-                            <div className="icon_box flex flex-col justify-center items-center gap-[12px] bg-pink-300 w-[48%] ">
-                                <BsBoxFill className='text-[38px]/[45px]  ' />
-                                <h5 className='text-[18px]/[24px]  ' >Easy Returns</h5>
-                            </div>
-
-                            <div className="icon_box flex flex-col justify-center items-center gap-[12px] bg-pink-300 w-[48%] ">
-                                <PiCreditCardFill className='text-[38px]/[45px]  ' />
-                                <h5 className='text-[18px]/[24px]  ' >Secure Payments</h5>
-                            </div>
-
+                        <div className="text mt-5">
+                            <p className='font-[poppins] font-[600] text-[20px] sm:text-[22px] mb-2'> Product Description:</p>
+                            <p className='font-[poppins] font-[400] text-[16px] sm:text-lg'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, eveniet cupiditate velit aut, dolor ipsum facilis deserunt sunt dignissimos dolores eum amet ea ut excepturi et modi minima. Voluptas, libero?</p>
                         </div>
 
                         <div className="pt-[25px]">
                             <Accordian />
                         </div>
 
-
                     </div>
 
-
+                </div>
+                <div className="w-[100%] py-[50px]">
+                    
+                    <ProductIconDetails />
                 </div>
             </div>
 
