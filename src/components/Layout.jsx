@@ -9,7 +9,7 @@ const Layout = () => {
     return (
         <>
             <Header />
-            <div  >
+            <div className=' mt-[65px] '  >
                 <Outlet />
             </div>
             <ScrollToTop />

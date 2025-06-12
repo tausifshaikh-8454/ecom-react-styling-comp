@@ -1,11 +1,17 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
+
+import { GrCart } from "react-icons/gr";
+
+
 import './header.css'
 import '../../index.css'
+import { useCart } from '../../contexts/ProdProvider';
 
 const Header = () => {
+
     return (
-        <header className=' head_foot_cont_full flex border-b border-gray-300 py-3  bg-white min-h-[65px] tracking-wide relative z-50'>
+        <header className=' head_foot_cont_full flex border-b border-gray-300 py-3  bg-white min-h-[65px] tracking-wide z-50 fixed top-0 w-full ' >
             <div className=' head_foot_cont flex flex-wrap items-center gap-4 max-w-screen-xl mx-auto w-full'>
                 <Link to="/" className="max-sm:hidden"><img src="https://readymadeui.com/readymadeui.svg" alt="logo" className='w-[134px]' /></Link>
                 <Link to="/" className="hidden max-sm:block"><img src="https://readymadeui.com/readymadeui-short.svg" alt="logo" className='w-8' /></Link>
@@ -29,21 +35,27 @@ const Header = () => {
                             <Link to="/"><img src="https://readymadeui.com/readymadeui.svg" alt="logo" className='w-36' /></Link>
                         </li>
                         <li className='max-lg:border-b max-lg:py-3 px-3'>
-                            <NavLink to='/' className={ ({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "font-medium lg:hover:text-blue-700 text-slate-900 block text-[16px]" } >Home</NavLink>
+                            <NavLink to='/' className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "font-medium lg:hover:text-blue-700 text-slate-900 block text-[16px]"} >Home</NavLink>
                         </li>
                         <li className='max-lg:border-b max-lg:py-3 px-3'>
-                            <NavLink to='/about-us' className={ ({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "font-medium lg:hover:text-blue-700 text-slate-900 block text-[16px]" } >About Us</NavLink>
+                            <NavLink to='/about-us' className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "font-medium lg:hover:text-blue-700 text-slate-900 block text-[16px]"} >About Us</NavLink>
                         </li>
                         <li className='max-lg:border-b max-lg:py-3 px-3'>
-                            <NavLink to='/blogs' className={ ({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "font-medium lg:hover:text-blue-700 text-slate-900 block text-[16px]" } >Blogs</NavLink>
+                            <NavLink to='/blogs' className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "font-medium lg:hover:text-blue-700 text-slate-900 block text-[16px]"} >Blogs</NavLink>
                         </li>
                         <li className='max-lg:border-b max-lg:py-3 px-3'>
-                            <NavLink to='/products' className={ ({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "font-medium lg:hover:text-blue-700 text-slate-900 block text-[16px]" } >Products</NavLink>
+                            <NavLink to='/products' className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "font-medium lg:hover:text-blue-700 text-slate-900 block text-[16px]"} >Products</NavLink>
                         </li>
                         <li className='max-lg:border-b max-lg:py-3 px-3'>
-                            <NavLink to='/cart' className={ ({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "font-medium lg:hover:text-blue-700 text-slate-900 block text-[16px]" } >Cart</NavLink>
+                            <NavLink to='/contact' className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "font-medium lg:hover:text-blue-700 text-slate-900 block text-[16px]"} >Contact</NavLink>
                         </li>
-                        
+                        <li className='max-lg:border-b max-lg:py-3 px-3 relative ' >
+                            <Link to='/cart' className="font-medium lg:hover:text-blue-700 text-slate-900 block text-[16px]"  >
+                                <GrCart className='text-[22px]/[22px]  ' />
+                                <div className=" text-white bg-[var(--primary-color)] text-[13px]/[13px] rounded-[50%] w-[24px] h-[24px] p-0 flex justify-center items-center absolute top-[-13px] right-[-4px]    ">1</div>
+                            </Link>
+                        </li>
+
                     </ul>
                 </div>
 

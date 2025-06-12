@@ -27,7 +27,7 @@ const Products = () => {
             {/* >>>>>>>>>>>>>> In Cont */}
             <div className="container_layout mx-auto flex justify-center items-center flex-col  "  >
 
-                <h1 className=" text-3xl font-bold text-center pb-5 ">Products</h1>
+                <h1 className="font-[montserrat] font-[700] text-5xl text-center pb-5 ">Products</h1>
 
                 <div className="cont flex w-full flex-wrap justify-center items-center gap-[20px] " >
 
@@ -40,10 +40,11 @@ const Products = () => {
                                     prodData.map(elem => <ProductCard
                                         urlToProd={elem.slug}
                                         key={elem.id}
-                                        boxWidth={"w-[23%]"}
+                                        boxWidth={"w-[25%]"}
                                         name={elem.name}
                                         price={elem.price.sale_price}
                                         featImg={elem.feat_img}
+                                        prodCat={elem.category}
                                     />
                                     )
                                 )

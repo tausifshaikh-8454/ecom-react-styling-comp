@@ -1,0 +1,5 @@
+/* style for navigtion arrow */
+.abt-slider .swiper-button-next:after, .abt-slider .swiper-button-prev:after {
+    font-size: 30px;
+    color: #000;
+}

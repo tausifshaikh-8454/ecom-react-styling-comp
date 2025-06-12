@@ -47,7 +47,7 @@ const ProductDetail = () => {
                     <div className="right_sec w-full ">
                         <h3 className='font-[Montserrat] text-[25px] sm:text-[35px] lg:text-[50px] font-[600]'>Main Product Name</h3>
 
-                        <div className="price_cont flex flex-wrap justify-between w-full sm:w-[450px] mb-3">
+                        <div className="price_cont flex flex-wrap w-full gap-x-[10px] gap-y-[0px] sm:gap[10px] lg:gap-[10px] mb-3">
                             <p className='font-[Montserrat] font-semibold  text-[16px] sm:text-md line-through text-[#9c9898]'  >Regular Price: <span className="sm:text-[20px] text-[18px] font-[600] "> Rs: 5000 </span></p>
                             <p className='font-[Montserrat] font-semibold text-[16px] sm:text-md'  > Sale Price: <span className="sm:text-[20px] text-[18px] font-[600]">Rs: 2500</span> </p>
                         </div>

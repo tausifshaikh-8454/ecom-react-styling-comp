@@ -3,12 +3,13 @@ import { Routes, Route } from "react-router";
 import Layout from './components/Layout'
 import HomePage from './Pages/Home/HomePage'
 import AboutPage from './Pages/About/AboutPage'
-import BlogPage from './Pages/Blogs/BlogPage';
+import BlogListingPage from './Pages/Blogs/BlogListingPage';
 import Error404Page from './Pages/404Page/Error404Page';
 import Products from './Pages/Products_List/Products';
 import CartPage from './Pages/Cart/CartPage';
 import { ProdProvider } from './contexts/ProdProvider';
 import ProductDetail from './Pages/Product_Detail/ProductDetail';
+import Contact from './Pages/Contact/Contact';
 
 const App = () => {
 
@@ -46,13 +47,15 @@ const App = () => {
 
             <Route path='/about-us' element={<AboutPage />} />
 
-            <Route path='/blogs' element={<BlogPage />} />
+            <Route path='/blogs' element={<BlogListingPage />} />
 
             <Route path='/products' element={<Products />} />
 
             <Route path='/products/:slug' element={<ProductDetail />} />
 
             <Route path='/cart' element={<CartPage />} />
+
+            <Route path='/contact' element={<Contact />} />
 
             <Route path='*' element={<Error404Page />} />
 
