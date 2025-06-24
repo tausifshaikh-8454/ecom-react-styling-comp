@@ -21,7 +21,7 @@ const ProductCard = ({
 
                     <div className="w-[100%] flex items-center mt-3">
                         <div className="texts flex flex-col justify-between pt-[12px] w-[70%] ">
-                            <h3 className='font-[montserrat] font-[500]  text-[18px]/[22px] w-[100%] capitalize ' >{name}</h3>
+                            <h3 className='font-[poppins] font-[600]  text-[18px]/[22px] w-[100%] capitalize ' >{name}</h3>
                             <p className='font-[montserrat] font-[500] text-[#AFADAE] text-[12px] w-[100%] mt-1 ' >{prodCat}</p>
                         </div>
                         <p className='font-[montserrat] font-[600] text-[18px] w-[30%] text-right bg-[#F6F6F6] px-[10px] py-[5px]  '  > &#8377; {price} </p>

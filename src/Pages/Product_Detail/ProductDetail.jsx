@@ -55,7 +55,7 @@ const ProductDetail = () => {
 
                     <div className="right_sec w-full ">
 
-                        <h3 className='font-[Montserrat] text-[25px] sm:text-[35px] lg:text-[35px]/[45px] font-[700]'>{prodData.name}</h3>
+                        <h3 className='font-[poppins] text-[25px] sm:text-[35px] lg:text-[35px]/[45px] font-[600]'>{prodData.name}</h3>
 
 
 
@@ -73,7 +73,7 @@ const ProductDetail = () => {
 
                         <div className="text mt-10">
                             <p className='font-[poppins] font-[600] text-[20px] sm:text-[22px] mb-2'> Product Description:</p>
-                            <p className='font-[poppins] font-[500] text-[16px] sm:text-[18px] dang-cont' dangerouslySetInnerHTML={{ __html: prodData.description }} />
+                            <p className='font-[Montserrat] font-[500] text-[16px] dang-cont' dangerouslySetInnerHTML={{ __html: prodData.description }} />
                         </div>
 
                         <div className="pt-[25px]">

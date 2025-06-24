@@ -22,9 +22,12 @@ const BlogDetailsPage = () => {
       (<>
         <div className="main-div">
           <div className="container_layout">
-            <h1 className=''>{blogData.blogTitle}</h1>
-            <img src={blogData.blogImages.featuredImg} alt="spot Image" />
-            <p className="">{blogData.blogDetailedDescription}</p>
+            <div className="mt-[250px] mb-[50px]">
+              <h1 className='font-[poppins] text-3xl font-[600] text-center'>{blogData.blogTitle}</h1>
+            </div>
+            
+            <img className='w-[100%] max-h-[700px] rounded-2xl' src={blogData.blogImages.featuredImg} alt="spot Image" />
+            <p className="font-[montserrat] font-[500] text-[18px] text-[#333] my-[70px]" dangerouslySetInnerHTML={{ __html: blogData.blogDetailedDescription }} />
 
           </div>
         </div>
