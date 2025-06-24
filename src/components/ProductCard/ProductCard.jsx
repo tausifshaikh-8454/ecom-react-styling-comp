@@ -21,7 +21,7 @@ const ProductCard = ({
 
                     <div className="w-[100%] flex items-center mt-3">
                         <div className="texts flex flex-col justify-between pt-[12px] w-[70%] ">
-                            <h3 className='font-[montserrat] font-[500]  text-[18px]/[22px] w-[100%] capitalize  ' >{name}</h3>
+                            <h3 className='font-[montserrat] font-[500]  text-[18px]/[22px] w-[100%] capitalize ' >{name}</h3>
                             <p className='font-[montserrat] font-[500] text-[#AFADAE] text-[12px] w-[100%] mt-1 ' >{prodCat}</p>
                         </div>
                         <p className='font-[montserrat] font-[600] text-[18px] w-[30%] text-right bg-[#F6F6F6] px-[10px] py-[5px]  '  > &#8377; {price} </p>
@@ -29,7 +29,7 @@ const ProductCard = ({
 
 
 
-                    <button className=' add_to_cart_btn w-[85%] top-[295px] left-[22px] absolute  uppercase transition-all flex justify-center items-center p-[12px 25px] px-[25px] py-[12px] border border-black bg-black text-white hover:bg-white hover:text-black cursor-pointer  ' >Add to Cart</button>
+                    <button className=' add_to_cart_btn w-[85%] top-[295px] left-[22px] absolute  uppercase transition-all flex justify-center items-center p-[12px 25px] px-[25px] py-[12px] border border-black bg-black text-white hover:bg-white hover:text-black cursor-pointer' >Add to Cart</button>
 
                 </Link>
             </div>

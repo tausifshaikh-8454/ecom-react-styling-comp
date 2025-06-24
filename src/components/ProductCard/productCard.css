@@ -1,19 +1,20 @@
 .add_to_cart_btn,
 .prod_card,
 .prod_card:hover {
-    transition: all .25s ease-in-out;
+    transition: all .25s ease-in;
 }
 
 .add_to_cart_btn {
     opacity: 0;
     pointer-events: none;
-    top: 310px;
+    top: 320px;
+    
 }
 
 .prod_card:hover .add_to_cart_btn {
     opacity: 1;
     pointer-events: all;
-    top: 290px;
+    top: 320px;
 }
 
 

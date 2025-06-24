@@ -3,6 +3,7 @@ import ProductCard from '../../components/ProductCard/ProductCard'
 import '../../components/layout.css'
 import Loader from '../../components/Loader/SkeletonLoader'
 import useFetch from '../../hooks/useFetch'
+import prodSpotlight from '../../assets/prodListing/productSpot.webp'
 
 
 
@@ -22,14 +23,16 @@ const Products = () => {
 
     return (
 
-        <div className=" py-[50px] "  >
+        <div className=""  >
 
             {/* >>>>>>>>>>>>>> In Cont */}
-            <div className="container_layout mx-auto flex justify-center items-center flex-col  "  >
+            <div className="mx-auto flex justify-center items-center flex-col"  >
+                <div className="w-[100%] h-[500px] flex items-center justify-center bg-cover bg-no-repeat bg-center mb-20" style={{backgroundImage:`url(${prodSpotlight})`}}>
+                    <h1 className="font-[montserrat] font-[700] text-4xl lg:text-6xl text-white text-center pb-5 ">Products</h1>
+                </div>
+                
 
-                <h1 className="font-[montserrat] font-[700] text-5xl text-center pb-5 ">Products</h1>
-
-                <div className="cont flex w-full flex-wrap justify-center items-center gap-[20px] " >
+                <div className="container_layout flex w-full flex-wrap justify-center items-center gap-[20px] " >
 
                     {
                         loader ?

@@ -10,6 +10,7 @@ import CartPage from './Pages/Cart/CartPage';
 import { ProdProvider } from './contexts/ProdProvider';
 import ProductDetail from './Pages/Product_Detail/ProductDetail';
 import Contact from './Pages/Contact/Contact';
+import BlogDetailsPage from './Pages/Blogs/BlogDetailsPage';
 
 const App = () => {
 
@@ -48,6 +49,8 @@ const App = () => {
             <Route path='/about-us' element={<AboutPage />} />
 
             <Route path='/blogs' element={<BlogListingPage />} />
+
+            <Route path='/blogs/:slug' element={<BlogDetailsPage />} />
 
             <Route path='/products' element={<Products />} />
 

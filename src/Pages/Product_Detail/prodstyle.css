@@ -1,0 +1,14 @@
+.dang-cont ul{
+    margin-top: 15px;
+    margin-left: 20px;
+} 
+
+
+.dang-cont li{
+    list-style: circle;
+    font-family: 'poppins';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-top: 10px;
+}
