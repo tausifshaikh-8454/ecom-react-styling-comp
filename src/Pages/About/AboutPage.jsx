@@ -3,6 +3,8 @@ import Slider from '../../components/Slider/Slider'
 import about from '../../assets/about-page/about-spotlight.webp'
 import paraImg from '../../assets/about-page/business-hands-joined-together-teamwork 1.png'
 import visionImg from '../../assets/about-page/vission.png'
+import NumberCounter from '../../components/AnimatedNumber/NumberCounter'
+import { UNSAFE_createClientRoutes } from 'react-router-dom'
 
 
 
@@ -20,6 +22,14 @@ const About = () => {
         <div className=" int-para lg:mt-20 flex flex-col gap-3 mt-[20px]">
           <p className='font-[montserrat] font-normal text-lg text-[#333]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque iure tenetur esse harum saepe aliquid temporibus aspernatur asperiores est tempore. Deserunt eum, at alias iste repellendus mollitia adipisci voluptatum! Libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque iure tenetur esse harum saepe aliquid temporibus aspernatur asperiores est tempore. Deserunt eum, at alias iste repellendus mollitia adipisci voluptatum! Libero.</p>
           <p className='font-[montserrat] font-normal text-lg text-[#333]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque iure tenetur esse harum saepe aliquid temporibus aspernatur asperiores est tempore. Deserunt eum, at alias iste repellendus mollitia adipisci voluptatum! Libero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque iure tenetur esse harum saepe aliquid temporibus aspernatur asperiores est tempore. Deserunt eum, at alias iste repellendus mollitia adipisci voluptatum! Libero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque iure tenetur esse harum saepe aliquid temporibus aspernatur asperiores est tempore. Deserunt eum, at alias iste repellendus mollitia adipisci voluptatum! Libero.</p>
+        </div>
+
+        {/* counter */}
+        <div className="flex flex-row py-20">
+          <NumberCounter width={'25%'} title={"clients"} number={100} />
+          <NumberCounter width={'25%'} title={"Industries Serve"} number={35}/>
+          <NumberCounter width={'25%'} title={"Countries Presence"} number={50}/>
+          <NumberCounter width={'25%'} title={"Years Of Experience"} number={16}/>
         </div>
 
         <div className="flex flex-col md:flex-row my-[30px] gap-[30px]" >
@@ -52,7 +62,10 @@ const About = () => {
 
         
 
+        
+
       </div>
+      
 
 
     </div>
