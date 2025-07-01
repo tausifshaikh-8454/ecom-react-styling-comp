@@ -46,14 +46,8 @@ const ProductSlider = ({
         <div className=' w-full py-[50px]' >
 
             <div className="texts flex items-center justify-between pb-[20px] ">
-                <h3 className='uppercase text-[32px]/[40px] ' >{title}</h3>
-                <Link
-                    to={urlVal}
-                    className=' hover:underline '
-                >
-
-                    {urlText}
-                </Link>
+                <h3 className='font-[inter] font-medium text-[24px]/[32px] text-[#000] ' >{title}</h3>
+                <Link to={urlVal} className='font-[inter] font-regular text-[16px] hover:underline '>{urlText}</Link>
             </div>
 
 
@@ -70,7 +64,7 @@ const ProductSlider = ({
                 >
                     {
                         filteredData.map((elem) => {
-                            return <SwiperSlide> <ProductCard name={elem.name} price={elem.price.sale_price} featImg={elem.feat_img} urlToProd={elem.slug}  /> </SwiperSlide>
+                            return <SwiperSlide> <ProductCard name={elem.name} price={elem.price.sale_price} featImg={elem.feat_img} urlToProd={elem.slug} /> </SwiperSlide>
                         })
                     }
 

@@ -4,6 +4,7 @@ import '../../components/layout.css'
 import Loader from '../../components/Loader/SkeletonLoader'
 import useFetch from '../../hooks/useFetch'
 import prodSpotlight from '../../assets/prodListing/productSpot.webp'
+import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs'
 
 
 
@@ -26,36 +27,41 @@ const Products = () => {
         <div className=""  >
 
             {/* >>>>>>>>>>>>>> In Cont */}
-            <div className="mx-auto flex justify-center items-center flex-col"  >
-                <div className="w-[100%] h-[500px] flex items-center justify-center bg-cover bg-no-repeat bg-center mb-20" style={{ backgroundImage: `url(${prodSpotlight})` }}>
+            <div className="flex flex-col justify-center items-center"  >
+                <div className="w-full lg:h-[500px] h-[300px] flex flex-col items-center justify-center bg-cover relative bg-no-repeat bg-center md:mb-20 mb-10" style={{ backgroundImage: `url(${prodSpotlight})` }}>
                     <h1 className="font-[montserrat] font-[700] text-4xl lg:text-6xl text-white text-center pb-5 ">Products</h1>
+                    <div className="max-w-[1440px] w-full px-[50px] py-[20px] absolute top-0" >
+                        <BreadCrumbs />
+                    </div>
                 </div>
 
 
-                <div className="container_layout flex flex-row" >
-                    <div className="cat-search w-[20%]">
-                        <h3 className="font-[inter] font-[500] text-[18px] border-b-1 pb-[10px]">Search by category</h3>
-                        <div className="checkbox-cat flex flex-col mt-[30px]">
+
+
+                <div className="container_layout flex md:flex-row flex-col gap-[10px]" >
+                    <div className="cat-search lg:w-[20%] md:w-[25%] w-full mb-[20px]">
+                        <h3 className="font-[inter] font-[500] lg:text-[18px] text-[16px] border-b-1 pb-[10px]">Search by category</h3>
+                        <div className="checkbox-cat flex flex-col md:mt-[30px] mt-[20px]">
                             <div className="chkbox flex flex-row gap-2">
                                 <input type="checkbox" name="coverCases" id="coverCases" />
-                                <label for="coverCases" className='font-[inter] font-[500] text-[15px]'>Cover & Cases</label>
-                                
+                                <label for="coverCases" className='font-[inter] font-[500] lg:text-[15px] text-[12px]'>Cover & Cases</label>
+
                             </div>
                             <div className="chkbox flex flex-row gap-2 my-[20px]">
                                 <input type="checkbox" name="powerBanks" id="powerBanks" />
-                                <label for="powerBanks" className='font-[inter] font-[500] text-[15px]'>Power Banks</label>
-                                
+                                <label for="powerBanks" className='font-[inter] font-[500] lg:text-[15px] text-[12px]'>Power Banks</label>
+
                             </div>
                             <div className="chkbox flex gap-2 flex-row">
                                 <input type="checkbox" name="belts" id="belts" />
-                                <label for="belts" className='font-[inter] font-[500] text-[15px]'>Stand & Straps</label>
-                                
+                                <label for="belts" className='font-[inter] font-[500] lg:text-[15px] text-[12px]'>Stand & Straps</label>
+
                             </div>
 
 
                         </div>
                     </div>
-                    <div className="flex w-[80%] flex-wrap justify-center items-center gap-[20px] mb-[100px]">
+                    <div className="flex lg:w-[80%] md:w-[75%] w-full flex-wrap justify-center items-center gap-[20px] md:mb-[100px] mb-10">
                         {
                             loader ?
                                 (<Loader />)
@@ -65,7 +71,7 @@ const Products = () => {
                                         prodData.map(elem => <ProductCard
                                             urlToProd={elem.slug}
                                             key={elem.id}
-                                            boxWidth={"w-[30%]"}
+                                            boxWidth={"lg:w-[30%] md:w-[46%]"}
                                             name={elem.name}
                                             price={elem.price.sale_price}
                                             featImg={elem.feat_img}

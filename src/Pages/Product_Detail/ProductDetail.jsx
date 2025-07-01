@@ -12,6 +12,8 @@ import ImageGallerySlider from '../../components/PDP_Page/ImageGallerySliders/Im
 import Accordian from '../../components/PDP_Page/Accordian/Accordian';
 import ProductIconDetails from '../../components/PDP_Page/ProductFeaturesBlock/ProductIconDetails';
 import './prodstyle.css'
+import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs';
+import ProductSlider from '../../components/ProductSlider/ProductSlider';
 
 
 const ProductDetail = () => {
@@ -26,8 +28,8 @@ const ProductDetail = () => {
     let error = useProdList.error;
     let prodData = useProdList.data;
 
-    
-    if(!prodData){
+
+    if (!prodData) {
         return ("no product found")
     }
 
@@ -39,14 +41,15 @@ const ProductDetail = () => {
 
             {/* >>>>>>>>>>>>>> In Cont */}
             <div className="container_layout mx-auto flex justify-center items-center flex-col"  >
-
-                <div className='py-[50px] w-full flex flex-wrap sm:flex-nowrap gap-[50px]' >
+                <div className="w-full py-[20px] ">
+                    <BreadCrumbs />
+                </div>
+                <div className='py-[10px] lg:mt-[50px] w-full flex flex-wrap sm:flex-nowrap gap-[50px]' >
 
                     {/* >>>>>>>>>>>>> Left Section */}
                     <div className="left_sec w-[100%]" >
-                        {/* <img src="https://www.tintaccessories.com/wp-content/uploads/2024/01/MagPop-JPEG-1024x1024.jpg" alt="" /> */}
                         {/* >>>>>>>>>> Image Gallery Slider */}
-                        <ImageGallerySlider apiImg = {prodData.img_gallery}/>
+                        <ImageGallerySlider apiImg={prodData.img_gallery} />
                     </div>
 
 
@@ -55,39 +58,41 @@ const ProductDetail = () => {
 
                     <div className="right_sec w-full ">
 
-                        <h3 className='font-[poppins] text-[25px] sm:text-[35px] lg:text-[35px]/[45px] font-[600]'>{prodData.name}</h3>
+                        <h3 className='font-[inter] text-[25px] sm:text-[35px] lg:text-[40px]/[55px] font-[700]'>{prodData.name}</h3>
 
+                        <div className="price_cont flex flex-wrap items-center w-full gap-x-[10px] gap-y-[0px] sm:gap[10px] lg:gap-[20px] mt-[10px]">
+                            <p className='font-[inter] font-medium text-[14px] text-center md:text-[32px] text-[#000]'  > &#8377; {prodData.price.sale_price}</p>
+                            <p className='font-[inter] font-400 text-[16px] text-center md:text-[24px] line-through text-[#A0A0A0]'  > &#8377; {prodData.price.reg_price}</p>
 
+                        </div>
+                        <div className="w-fit my-[10px]" >
+                            <NumCounter />
+                        </div>
 
-                        <div className="price_cont flex flex-wrap w-full gap-x-[10px] gap-y-[0px] sm:gap[10px] lg:gap-[20px] mb-3 mt-7">
-                            <p className='font-[Montserrat] font-semibold  text-[16px] sm:text-[18px] line-through text-[#9c9898]'  >Regular Price: <span className="md:text-[18px] text-[18px] font-[600] ">{prodData.price.reg_price}</span></p>
-                            <p className='font-[Montserrat] font-semibold text-[16px] sm:text-[18px]'  > Sale Price: <span className="md:text-[18px] text-[18px] font-[700]">{prodData.price.sale_price}</span> </p>
+                        <div className="text py-[20px]">
+
+                            <p className='font-[inter] font-[400] text-[16px]/[25px] dang-cont' dangerouslySetInnerHTML={{ __html: prodData.description.length < 250 ? prodData.description : prodData.description.slice(0, 250) + '...' }} />
                         </div>
                         <div className="cont flex flex-nowrap gap-10">
-
-                            <NumCounter />
-
+                            <Button text="Add to Wishlist" />
                             <Button text="Add to Cart" />
-
                         </div>
-
-                        <div className="text mt-10">
-                            <p className='font-[poppins] font-[600] text-[20px] sm:text-[22px] mb-2'> Product Description:</p>
-                            <p className='font-[Montserrat] font-[500] text-[16px] dang-cont' dangerouslySetInnerHTML={{ __html: prodData.description }} />
-                        </div>
-
-                        <div className="pt-[25px]">
-                            <Accordian />
-                        </div>
-
                     </div>
-
-
-
                 </div>
                 <div className="w-[100%] py-[50px]">
-
                     <ProductIconDetails />
+                </div>
+            </div>
+            <div className="desc w-full bg-[#FAFAFA] flex items-center justify-center">
+                <div className="mainCont max-w-[1440px] w-full my-[80px] py-[50px] rounded-[8px] px-[40px] bg-white">
+                    <h3 className="font-[inter] font-medium text-[24px] text-[#000] mb-[20px]">Details</h3>
+                    <p className="font-[inter] font-medium text-[16px] text-[#9d9d9d] dang-cont" dangerouslySetInnerHTML={{ __html: prodData.description }} />
+                </div>
+            </div>
+
+            <div className="">
+                <div className="slider container_layout">
+                    <ProductSlider title="Related Products" urlText="" urlVal="/products" categoryName="Covers and Cases" />
                 </div>
             </div>
 

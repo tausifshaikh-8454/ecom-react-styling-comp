@@ -3,14 +3,13 @@ import React from 'react'
 const Button = ({
     text = "Dummy Text",
     borderClr = 'border-black',
-    bgClr = "bg-black",
-    textClr = "text-white",
-    hoverBgClr = "bg-white",
-    hoverTextClr = "text-black"
+    bgClr = "bg-white",
+    textClr = "text-black",
+    hoverTextClr = "text-[#fff]"
 }) => {
     return (
         <button
-            className={`font-[Montserrat] text-[16px] sm:text-lg  transition-all flex justify-center items-center px-[10px] py-[7px] lg:px-[20px] lg:py-[10px] border ${borderClr} ${bgClr} ${textClr} hover:${hoverBgClr} hover:${hoverTextClr} cursor-pointer rounded-[10px] `} >
+            className={`w-[260px] font-[inter] font-medium text-[16px] transition-all flex justify-center items-center py-[16px] border ${borderClr} ${bgClr} ${textClr} hover:bg-[#000] hover:${hoverTextClr} cursor-pointer rounded-[10px] `} >
             {text}
         </button>
     )
