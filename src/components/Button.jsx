@@ -9,7 +9,7 @@ const Button = ({
 }) => {
     return (
         <button
-            className={`w-[260px] font-[inter] font-medium text-[16px] transition-all flex justify-center items-center py-[16px] border ${borderClr} ${bgClr} ${textClr} hover:bg-[#000] hover:${hoverTextClr} cursor-pointer rounded-[10px] `} >
+            className={`lg:w-[240px] md:w-[150px] w-full font-[inter] font-medium text-[16px] transition-all flex justify-center items-center py-[16px] border ${borderClr} ${bgClr} ${textClr} hover:bg-[#000] hover:${hoverTextClr} cursor-pointer rounded-[10px] `} >
             {text}
         </button>
     )

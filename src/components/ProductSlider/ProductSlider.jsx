@@ -43,7 +43,7 @@ const ProductSlider = ({
 
     return (
 
-        <div className=' w-full py-[50px]' >
+        <div className=' w-full py-[50px] ' >
 
             <div className="texts flex items-center justify-between pb-[20px] ">
                 <h3 className='font-[inter] font-medium text-[24px]/[32px] text-[#000] ' >{title}</h3>
@@ -60,11 +60,30 @@ const ProductSlider = ({
                     slidesPerView={4}
                     pagination={{ clickable: true }}
                     loop={true}
+                    breakpoints={{
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                        },
+                        
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                        },
+                        1025: {
+                            slidesPerView: 4,
+                            spaceBetween: 20,
+                        },
+                    }}
 
                 >
                     {
                         filteredData.map((elem) => {
-                            return <SwiperSlide> <ProductCard name={elem.name} price={elem.price.sale_price} featImg={elem.feat_img} urlToProd={elem.slug} /> </SwiperSlide>
+                            return <SwiperSlide> <ProductCard name={elem.name} price={elem.price.sale_price} featImg={elem.feat_img} urlToProd={elem.slug} prodCat={categoryName} /> </SwiperSlide>
                         })
                     }
 

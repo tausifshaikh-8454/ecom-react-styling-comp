@@ -1,4 +1,4 @@
-import React from 'react'
+import {React, useState } from 'react'
 import ProductCard from '../../components/ProductCard/ProductCard'
 import '../../components/layout.css'
 import Loader from '../../components/Loader/SkeletonLoader'
@@ -19,8 +19,22 @@ const Products = () => {
     let loader = useProdList.loader;
     let error = useProdList.error;
     let prodData = useProdList.data;
+    
+    let [checkValue, setcheckValue] = useState([])
+  
+    const checkBoxChanged = (e) => {
+        let {value, checked} = e.target;
 
-    // console.log('useProdList Main hook in List Page', useProdList);
+        if(checked){
+            setcheckValue([value])
+        }
+        else{
+            setcheckValue([])
+        }
+        
+        
+    }
+    
 
     return (
 
@@ -43,24 +57,24 @@ const Products = () => {
                         <h3 className="font-[inter] font-[500] lg:text-[18px] text-[16px] border-b-1 pb-[10px]">Search by category</h3>
                         <div className="checkbox-cat flex flex-col md:mt-[30px] mt-[20px]">
                             <div className="chkbox flex flex-row gap-2">
-                                <input type="checkbox" name="coverCases" id="coverCases" />
-                                <label for="coverCases" className='font-[inter] font-[500] lg:text-[15px] text-[12px]'>Cover & Cases</label>
+                                 <label htmlFor="coverCases" className='font-[inter] font-[500] lg:text-[15px] text-[12px]'> <input type="checkbox" name="Covers and Cases" value='Covers and Cases' id="coverCases" onChange={checkBoxChanged} className='mr-[10px]' />
+                               Cover and Cases</label>
 
                             </div>
                             <div className="chkbox flex flex-row gap-2 my-[20px]">
-                                <input type="checkbox" name="powerBanks" id="powerBanks" />
-                                <label for="powerBanks" className='font-[inter] font-[500] lg:text-[15px] text-[12px]'>Power Banks</label>
+                                <label htmlFor="powerBanks" className='font-[inter] font-[500] lg:text-[15px] text-[12px]'><input type="checkbox" name="powerBanks" value='Power Banks' id="powerBanks" onChange={checkBoxChanged} className='mr-[10px]' />
+                                Power Banks</label>
 
                             </div>
                             <div className="chkbox flex gap-2 flex-row">
-                                <input type="checkbox" name="belts" id="belts" />
-                                <label for="belts" className='font-[inter] font-[500] lg:text-[15px] text-[12px]'>Stand & Straps</label>
-
+                                <label htmlFor="belts"  className='font-[inter] font-[500] lg:text-[15px] text-[12px]'><input type="checkbox" name="belts" value='Stand and Straps' id="belts" onChange={checkBoxChanged} className='mr-[10px]' />
+                                Stand and Straps</label>
                             </div>
-
-
                         </div>
                     </div>
+
+
+
                     <div className="flex lg:w-[80%] md:w-[75%] w-full flex-wrap justify-center items-center gap-[20px] md:mb-[100px] mb-10">
                         {
                             loader ?
@@ -68,7 +82,7 @@ const Products = () => {
                                 : error ?
                                     (<p className="text-red-500">Something went wrong: {error.message}</p>) :
                                     (
-                                        prodData.map(elem => <ProductCard
+                                        prodData.filter(item => checkValue.length === 0 ? prodData : item.category === `${checkValue}`  ).map(elem => <ProductCard
                                             urlToProd={elem.slug}
                                             key={elem.id}
                                             boxWidth={"lg:w-[30%] md:w-[46%]"}

@@ -10,21 +10,21 @@ const BreadCrumbs = () => {
 
     let routeName = location.pathname.split('/').filter(rName => rName !== '');
 
-    let crumbs = routeName.map((crumb) => {
+    let crumbs = routeName.map((crumb, index) => {
         currentLink += `/${crumb}`;
 
         return (
-            <>
-                <span className='breadCrumbs'>
+            
+                <span className='breadCrumbs' key={index}>
                     <Link to={currentLink}>{crumb}</Link>
                 </span>
-            </>
+            
         );
     });
 
 
     return <nav>
-        <span className='breadCrumbs'>
+        <span className='breadCrumbs' key = 'home' >
             <Link to='/'>Home</Link>
         </span>
         {crumbs}
